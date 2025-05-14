@@ -24,6 +24,7 @@ class FiestaApp {
     
     displayUserInfo() {
         const userInfo = tg.initDataUnsafe.user;
+        console.log('User Info:', userInfo); // Добавим отладочный вывод
         if (userInfo) {
             const userInfoDiv = document.getElementById('user-info');
             userInfoDiv.textContent = `Пользователь: ${userInfo.first_name} ${userInfo.last_name || ''}`;
